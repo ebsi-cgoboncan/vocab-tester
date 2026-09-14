@@ -14,7 +14,7 @@ const props = withDefaults(
     }
   >(),
   {
-    as: 'legend',
+    as: 'div',
   },
 )
 
