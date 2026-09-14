@@ -1,0 +1,65 @@
+parts:
+  prefixes:
+    - id: 1
+      word: in-
+      definition: in, into; not
+  roots:
+    - id: 1
+      word: al/ alter
+      definition: other
+    - id: 2
+      word: tru
+      definition: faithful
+  suffixes:
+    - id: 1
+      word: -able
+      definition: able to be
+    - id: 2
+      word: -ate/n-ate
+      definition: to make, to act; one who, that which
+    - id: 3
+      word: -ation
+      definition: an action or process
+    - id: 4
+      word: n-ative
+      definition: of, or relating to
+    - id: 5
+      word: i-en
+      definition: having the quality of
+    - id: 6
+      word: ist-ic
+      definition: like, related to
+    - id: 7
+      word: -ism
+      definition: a state of being; a quality or act
+definitions:
+  - id: 1
+    word: inalienable
+    definition: that may not be taken away or transferred
+  - id: 2
+    word: alteration
+    definition: action of changing or modifying
+  - id: 3
+    word: altruism
+    definition: selfless concern for the welfare of others
+  - id: 4
+    word: alternate
+    definition: to do in turns
+  - id: 5
+    word: alternative
+    definition: a choice between two things or among many
+  - id: 6
+    word: alien
+    definition: foreign
+  - id: 7
+    word: alienation
+    definition: action of withdrawing or separating from a former attachment
+  - id: 8
+    word: alienate
+    definition: to separate or make hostile
+  - id: 9
+    word: altruistic
+    definition: unselfish, generous
+  - id: 10
+    word: alter
+    definition: to change, to modify

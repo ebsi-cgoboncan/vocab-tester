@@ -1,0 +1,68 @@
+parts:
+  prefixes:
+    - id: 1
+      word: im-
+      definition: in, into; not
+  roots:
+    - id: 1
+      word: migr
+      definition: move, travel
+    - id: 2
+      word: acer/acr/acu
+      definition: sharp, bitter
+  suffixes:
+    - id: 1
+      word: -ory
+      definition: like, relating to, having the quality of; place or thing connected with
+    - id: 2
+      word: -ous
+      definition: having the quality of
+    - id: 3
+      word: -ity
+      definition: state, quality; that which
+    - id: 4
+      word: -id
+      definition: like, related to
+    - id: 5
+      word: -ation
+      definition: an action or process
+    - id: 6
+      word: -mony
+      definition: state, quality, act
+    - id: 7
+      word: -ant
+      definition: one who, that which; state, quality
+    - id: 8
+      word: -ate
+      definition: to make, to act; one who, that which
+definitions:
+  - id: 1
+    word: acuity
+    definition: keenness of vision or perception
+  - id: 2
+    word: acrimonious
+    definition: having the quality of being bitter, nasty, or sarcastic
+  - id: 3
+    word: immigration
+    definition: the act of moving to a new country to settle
+  - id: 4
+    word: acrimony
+    definition: that which causes bitterness or ill will
+  - id: 5
+    word: migrate
+    definition: to move from one place to another, often temporarily
+  - id: 6
+    word: acerbate
+    definition: to annoy or irritate; to make taste bitter
+  - id: 7
+    word: acrid
+    definition: irritatingly sharp or bitter
+  - id: 8
+    word: immigrant
+    definition: one who moves to another country to settle
+  - id: 9
+    word: migratory
+    definition: regularly moving to another place
+  - id: 10
+    word: migration
+    definition: movement from one place to another
