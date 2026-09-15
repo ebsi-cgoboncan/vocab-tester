@@ -13,7 +13,7 @@ const { weeks, onClick } = useViewModel()
     <div class="flex flex-col space-y-2">
       <div class="flex p-2 border rounded justify-between" v-for="week in weeks">
         <p>{{ week }}</p>
-        <Button @click="onClick(week)"> Practice Test</Button>
+        <Button @click="onClick(week)">Practice</Button>
       </div>
     </div>
   </section>
