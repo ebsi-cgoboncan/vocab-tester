@@ -6,12 +6,17 @@ export const useViewModel = () => {
   const router = useRouter()
   const lesson = useLessonStore()
 
-  const onClick = (week: Week) => {
+  const toReview = (week: Week) => {
+    router.push({ name: 'review', params: { week: week } })
+  }
+
+  const toLesson = (week: Week) => {
     router.push({ name: 'lesson', params: { week: week } })
   }
 
   return {
     weeks: lesson.weeks,
-    onClick,
+    toReview,
+    toLesson,
   }
 }

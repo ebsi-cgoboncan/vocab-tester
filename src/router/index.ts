@@ -9,6 +9,7 @@ const router = createRouter({
       name: 'home',
       component: Pages.Home,
     },
+    { path: '/review/:week/:seed(\\d+)?', name: 'review', component: Pages.Review },
     {
       path: '/lesson/:week/:seed(\\d+)?',
       name: 'lesson',

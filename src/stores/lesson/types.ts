@@ -3,8 +3,11 @@ import { Lessons } from './data'
 export type Week = keyof typeof Lessons
 
 export type Id = string
+
 export type Word = string
+
 export type Definition = string
+
 export type Type = 'prefix' | 'root' | 'suffix' | 'definition'
 
 export type Entry = {
@@ -14,6 +17,7 @@ export type Entry = {
 }
 
 export type Entries = readonly Entry[]
+
 export type Lesson = {
   parts: {
     prefixes: Entries
@@ -26,8 +30,8 @@ export type Lesson = {
 export type Answer = Id
 
 export type Choice = {
-  id: Id
-  word: Word
+  value: string
+  definition: string
 }
 
 export type Question = {
@@ -42,7 +46,7 @@ export type Item = {
   name: string
   word: string
   definition: string
-  choices: readonly { value: string; definition: string }[]
+  choices: readonly Choice[]
   required: boolean
 }
 

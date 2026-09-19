@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <script setup lang="ts">
-const { weeks, onClick } = useViewModel()
+const { weeks, toReview, toLesson } = useViewModel()
 </script>
 
 <template>
@@ -13,7 +13,10 @@ const { weeks, onClick } = useViewModel()
     <div class="flex flex-col space-y-2">
       <div class="flex p-2 border rounded justify-between" v-for="week in weeks">
         <p>{{ week }}</p>
-        <Button @click="onClick(week)">Practice</Button>
+        <div class="flex gap-2">
+          <Button variant="outline" @click="toReview(week)">Review</Button>
+          <Button variant="secondary" @click="toLesson(week)">Practice</Button>
+        </div>
       </div>
     </div>
   </section>

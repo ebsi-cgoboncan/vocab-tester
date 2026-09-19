@@ -16,11 +16,12 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "@lucide/vue": "^1.46.0",
+    "@lucide/vue": "^1.47.0",
     "@tailwindcss/vite": "^4.3.3",
     "@vueuse/core": "^14.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-vue": "^8.6.0",
     "fp-ts": "^2.16.11",
     "pinia": "^4.0.2",
     "reka-ui": "^2.10.4",
