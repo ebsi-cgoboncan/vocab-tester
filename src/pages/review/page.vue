@@ -6,6 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import { Speak } from '@/components/ui/speak'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -90,6 +91,7 @@ const onReshuffle = () => {
                   <p class="text-xs text-gray-300">Term</p>
                   <div class="flex items-center justify-center p-6 grow">
                     <p class="text-4xl font-semibold">{{ q.word }}</p>
+                    <Speak variant="ghost" v-if="category === 'words'" :word="q.word" />
                   </div>
                 </CardContent>
               </Card>
