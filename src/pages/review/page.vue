@@ -20,7 +20,7 @@ import {
 import { useViewModel } from './model'
 import type { Week } from '@/stores/lesson/types'
 import { useRoute } from 'vue-router'
-import { Shuffle, RotateCcw } from '@lucide/vue'
+import { Shuffle, RotateCcw, CornerRightUp } from '@lucide/vue'
 import { ref, watch } from 'vue'
 </script>
 
@@ -93,6 +93,7 @@ const onReshuffle = () => {
                     <p class="text-3xl font-semibold">{{ q.word }}</p>
                     <Speak variant="ghost" v-if="category === 'words'" :word="q.word" />
                   </div>
+                    <CornerRightUp class="size-4 text-gray-500 self-end" />
                 </CardContent>
               </Card>
               <Card v-else>
@@ -106,6 +107,7 @@ const onReshuffle = () => {
                       <p class="text-sm" v-html="q.example" />
                     </div>
                   </div>
+                    <CornerRightUp class="size-4 text-gray-500 self-end" />
                 </CardContent>
               </Card>
             </transition>
@@ -115,6 +117,7 @@ const onReshuffle = () => {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
+
     <div aria-hidden="true" class="mb-2 flex gap-1.5 mt-6">
       <button
         v-for="step in total"
