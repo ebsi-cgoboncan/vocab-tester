@@ -66,7 +66,7 @@ const onReshuffle = () => {
           <SelectItem value="words">Words</SelectItem>
         </SelectContent>
       </Select>
-      <div>
+      <div class="flex gap-2">
         <Button variant="outline" size="icon" @click="onReshuffle"><Shuffle /></Button>
         <Button variant="outline" size="icon" @click="api?.scrollTo(0)"><RotateCcw /></Button>
       </div>
