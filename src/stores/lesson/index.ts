@@ -16,6 +16,7 @@ const toQuestion: ToQuestion = (type) => (entry) => ({
   type: type,
   definition: entry.definition,
   word: entry.word,
+  example: entry.example,
 })
 
 type ToChoice = (quesiton: Question) => Choice

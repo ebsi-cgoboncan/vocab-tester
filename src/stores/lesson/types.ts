@@ -8,12 +8,15 @@ export type Word = string
 
 export type Definition = string
 
+export type Example = string
+
 export type Type = 'prefix' | 'root' | 'suffix' | 'definition'
 
 export type Entry = {
   id: Id
   word: Word
   definition: Definition
+  example: Example
 }
 
 export type Entries = readonly Entry[]
@@ -38,6 +41,7 @@ export type Question = {
   id: Id
   definition: Definition
   word: Word
+  example: Example
   type: Type
 }
 

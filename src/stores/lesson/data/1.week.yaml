@@ -3,66 +3,90 @@ parts:
     - id: 1
       word: im-
       definition: in, into; not
+      example: immigrant, impossible, impatient
+
   roots:
     - id: 1
       word: migr
       definition: move, travel
+      example: migrate, migration, migratory
     - id: 2
       word: acer/acr/acu
       definition: sharp, bitter
+      example: acerbate, acrid, acuity
+
   suffixes:
     - id: 1
       word: -ory
       definition: like, relating to, having the quality of; place or thing connected with
+      example: migratory, sensory, auditory
     - id: 2
       word: -ous
       definition: having the quality of
+      example: acrimonious, courageous, dangerous
     - id: 3
       word: -ity
       definition: state, quality; that which
+      example: acuity, clarity, purity
     - id: 4
       word: -id
       definition: like, related to
+      example: acrid, rigid, timid
     - id: 5
       word: -ation
       definition: an action or process
+      example: immigration, migration, preparation
     - id: 6
       word: -mony
       definition: state, quality, act
+      example: acrimony, ceremony, testimony
     - id: 7
       word: -ant
       definition: one who, that which; state, quality
+      example: immigrant, applicant, assistant
     - id: 8
       word: -ate
       definition: to make, to act; one who, that which
+      example: migrate, acerbate, activate
+
 definitions:
   - id: 1
     word: acuity
     definition: keenness of vision or perception
+    example: The eagle's remarkable <em>acuity</em> allows it to spot prey from high in the sky.
   - id: 2
     word: acrimonious
     definition: having the quality of being bitter, nasty, or sarcastic
+    example: The debate became <em>acrimonious</em> when the two sides began exchanging angry remarks.
   - id: 3
     word: immigration
     definition: the act of moving to a new country to settle
+    example: Her family's <em>immigration</em> to the United States gave them an opportunity to build a new life.
   - id: 4
     word: acrimony
     definition: that which causes bitterness or ill will
+    example: Despite their disagreement, they resolved the issue without <em>acrimony</em>.
   - id: 5
     word: migrate
     definition: to move from one place to another, often temporarily
+    example: Many birds <em>migrate</em> south during the winter.
   - id: 6
     word: acerbate
     definition: to annoy or irritate; to make taste bitter
+    example: His constant complaints began to <em>acerbate</em> everyone around him.
   - id: 7
     word: acrid
     definition: irritatingly sharp or bitter
+    example: The <em>acrid</em> smell of smoke filled the room.
   - id: 8
     word: immigrant
     definition: one who moves to another country to settle
+    example: The <em>immigrant</em> moved to a new country in search of better opportunities.
   - id: 9
     word: migratory
     definition: regularly moving to another place
+    example: The monarch butterfly is <em>migratory</em> and travels great distances each year.
   - id: 10
     word: migration
     definition: movement from one place to another
+    example: The annual <em>migration</em> of the whales takes them thousands of miles across the ocean.

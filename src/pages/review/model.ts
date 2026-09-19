@@ -3,7 +3,7 @@ import { pipe } from 'fp-ts/function'
 import { useLessonStore } from '@/stores/lesson'
 import { type Question, type Week } from '@/stores/lesson/types'
 import type { Term } from './types'
-import { computed, reactive, ref, watch, type Reactive } from 'vue'
+import { computed, reactive, ref, type Reactive } from 'vue'
 import { shuffle, sow } from '@/stores/lesson/utils'
 
 type ToTerm = (question: Question) => Reactive<Term>
@@ -12,6 +12,7 @@ const toTerm: ToTerm = (q) =>
     id: q.word,
     word: q.word,
     definition: q.definition,
+    example: q.example,
     isFront: ref(true),
   })
 

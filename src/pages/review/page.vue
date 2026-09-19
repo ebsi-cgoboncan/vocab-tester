@@ -88,18 +88,23 @@ const onReshuffle = () => {
             >
               <Card v-if="q.isFront">
                 <CardContent class="flex flex-col aspect-square">
-                  <p class="text-xs text-gray-300">Term</p>
+                  <p class="text-xs text-gray-500">Term</p>
                   <div class="flex items-center justify-center p-6 grow">
-                    <p class="text-4xl font-semibold">{{ q.word }}</p>
+                    <p class="text-3xl font-semibold">{{ q.word }}</p>
                     <Speak variant="ghost" v-if="category === 'words'" :word="q.word" />
                   </div>
                 </CardContent>
               </Card>
               <Card v-else>
                 <CardContent class="flex flex-col aspect-square">
-                  <p class="text-xs text-gray-300">Definition</p>
+                  <p class="text-xs text-gray-500">Definition</p>
                   <div class="flex items-center justify-center p-6 grow">
-                    <p class="text-4xl font-semibold">{{ q.definition }}</p>
+                    <div class="flex flex-col">
+                      <p class="text-sm text-gray-500">{{ q.word }}</p>
+                      <p class="text-3xl font-semibold">{{ q.definition }}</p>
+                        <p class="text-xs text-gray-500 mt-6">Example:</p>
+                      <p class="text-sm" v-html="q.example" />
+                    </div>
                   </div>
                 </CardContent>
               </Card>
