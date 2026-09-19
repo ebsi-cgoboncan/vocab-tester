@@ -14,23 +14,31 @@ import {
   QuestionnaireSubmit,
   QuestionnaireTitle,
 } from '@/components/ui/questionnaire'
+import { onMounted, useTemplateRef } from 'vue'
 </script>
 
 <script setup lang="ts">
 const route = useRoute()
+const questionnaire = useTemplateRef('questionnaire')
 const { week, seed } = route.params
 const _week = week as Week
 const _seed = parseInt(seed as string)
 
 const { items, onSubmit } = useViewModel(_week, _seed)
+
+onMounted(async () => {
+  questionnaire.value?.$el?.querySelector<HTMLElement>('[type="radio"]')?.focus()
+})
 </script>
 
 <template>
   <Questionnaire
+    ref="questionnaire"
     class="mx-auto max-w-md"
     :items="items"
     @submit.stop.prevent="onSubmit"
     shortcuts="letters"
+    tabindex="0"
   >
     <QuestionnaireProgress v-slot="{ current, total }" class="w-full">
       <div aria-hidden="true" class="mb-2 flex gap-1.5">

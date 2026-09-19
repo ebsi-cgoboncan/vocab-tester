@@ -10,7 +10,7 @@ export const useViewModel = (week: Week, seed: number) => {
 
   const onSubmit = (evt: Event) => {
     lesson.onSubmit(evt)
-    router.push({ name: 'results' })
+    router.push({ name: 'results', params: { week } })
   }
 
   return {

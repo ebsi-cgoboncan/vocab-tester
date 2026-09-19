@@ -15,7 +15,7 @@ const { weeks, toReview, toLesson } = useViewModel()
         <p>{{ week }}</p>
         <div class="flex gap-2">
           <Button variant="outline" @click="toReview(week)">Review</Button>
-          <Button variant="secondary" @click="toLesson(week)">Practice</Button>
+          <Button variant="secondary" @click="toLesson(week)">Test</Button>
         </div>
       </div>
     </div>

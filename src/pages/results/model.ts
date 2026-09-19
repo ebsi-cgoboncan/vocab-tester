@@ -36,7 +36,7 @@ export const useViewModel = () => {
 
   const week = lesson.week
 
-  const onHome = () => {
+  const toHome = () => {
     router.push({ name: 'home' })
   }
 
@@ -49,7 +49,7 @@ export const useViewModel = () => {
     total,
     incorrects,
     week,
-    onHome,
+    toHome,
     onRestart,
   }
 }

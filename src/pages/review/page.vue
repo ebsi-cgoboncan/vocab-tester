@@ -20,7 +20,7 @@ import { useViewModel } from './model'
 import type { Week } from '@/stores/lesson/types'
 import { useRoute } from 'vue-router'
 import { Shuffle, RotateCcw } from '@lucide/vue'
-import {  ref,  watch } from 'vue'
+import { ref, watch } from 'vue'
 </script>
 
 <script setup lang="ts">
@@ -49,10 +49,9 @@ const onInit = (val: CarouselApi) => {
 
 const onReshuffle = () => {
   reshuffle()
-  if(!api.value) return
+  if (!api.value) return
   api.value.scrollTo(0)
 }
-
 </script>
 
 <template>
@@ -68,8 +67,8 @@ const onReshuffle = () => {
         </SelectContent>
       </Select>
       <div>
-      <Button variant="outline" size="icon" @click="onReshuffle"><Shuffle /></Button>
-      <Button variant="outline" size="icon" @click="api?.scrollTo(0)"><RotateCcw /></Button>
+        <Button variant="outline" size="icon" @click="onReshuffle"><Shuffle /></Button>
+        <Button variant="outline" size="icon" @click="api?.scrollTo(0)"><RotateCcw /></Button>
       </div>
     </div>
 
