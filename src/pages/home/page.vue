@@ -20,17 +20,20 @@ const { weeks } = useViewModel()
         <div class="flex gap-2">
           <Button variant="outline" as-child>
             <router-link class="flex gap-2 items-center" :to="{ name: 'study', params: { week } }">
-              <Table /> Study
+              <Table />
+              <span class="sr-only sm:not-sr-only">Study</span>
             </router-link>
           </Button>
-          <Button variant="outline">
+          <Button variant="outline" as-child>
             <router-link class="flex gap-2 items-center" :to="{ name: 'review', params: { week } }">
-              <GalleryThumbnails /> Review
+              <GalleryThumbnails />
+              <span class="sr-only sm:not-sr-only">Review</span>
             </router-link>
           </Button>
-          <Button as-child>
+          <Button variant="outline" as-child>
             <router-link class="flex gap-2 items-center" :to="{ name: 'lesson', params: { week } }">
-              <BookCheck /> Test
+              <BookCheck />
+              <span class="sr-only sm:not-sr-only">Test</span>
             </router-link>
           </Button>
         </div>

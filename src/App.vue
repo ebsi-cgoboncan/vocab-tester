@@ -28,31 +28,43 @@ const onClick = () => (store.value = store.value === 'dark' ? 'light' : 'dark')
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink as-child>
-              <router-link :to="{ name: 'home' }"
-                ><span class="box flex gap-2"><BookOpenCheck /> Lessons</span></router-link
-              >
+              <router-link :to="{ name: 'home' }">
+                <span class="box flex gap-2">
+                  <BookOpenCheck />
+                  <span class="sr-only sm:not-sr-only">Lessons</span>
+                </span>
+              </router-link>
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem v-if="route.params.week" class="border-l">
             <NavigationMenuLink as-child>
-              <router-link :to="{ name: 'study', params: { week: route.params.week } }"
-                ><span class="box flex gap-2"><Table /> Study</span></router-link
-              >
+              <router-link :to="{ name: 'study', params: { week: route.params.week } }">
+                <span class="box flex gap-2">
+                  <Table />
+                  <span class="sr-only sm:not-sr-only">Study</span>
+                </span>
+              </router-link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem v-if="route.params.week">
             <NavigationMenuLink as-child>
-              <router-link :to="{ name: 'review', params: { week: route.params.week } }"
-                ><span class="box flex gap-2"><GalleryThumbnails /> Review </span></router-link
-              >
+              <router-link :to="{ name: 'review', params: { week: route.params.week } }">
+                <span class="box flex gap-2">
+                  <GalleryThumbnails />
+                  <span class="sr-only sm:not-sr-only">Review</span>
+                </span>
+              </router-link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem v-if="route.params.week">
             <NavigationMenuLink as-child>
-              <router-link :to="{ name: 'lesson', params: { week: route.params.week } }"
-                ><span class="box flex gap-2"><BookCheck /> Test </span></router-link
-              >
+              <router-link :to="{ name: 'lesson', params: { week: route.params.week } }">
+                <span class="box flex gap-2">
+                  <BookCheck />
+                  <span class="sr-only sm:not-sr-only">Test</span>
+                </span>
+              </router-link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
