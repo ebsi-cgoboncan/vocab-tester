@@ -56,8 +56,10 @@ const onReshuffle = () => {
 </script>
 
 <template>
-  <div class="mx-auto max-w-md">
+  <div class="mx-auto max-w-md flex flex-col gap-6">
     <div class="flex w-full justify-between">
+      <div class="flex gap-2 items-center">
+      Review
       <Select class="" v-model="category">
         <SelectTrigger>
           <SelectValue />
@@ -67,6 +69,8 @@ const onReshuffle = () => {
           <SelectItem value="words">Words</SelectItem>
         </SelectContent>
       </Select>
+      </div>
+
       <div class="flex gap-2">
         <Button variant="outline" size="icon" @click="onReshuffle"><Shuffle /></Button>
         <Button variant="outline" size="icon" @click="api?.scrollTo(0)"><RotateCcw /></Button>
@@ -114,11 +118,11 @@ const onReshuffle = () => {
           </div>
         </CarouselItem>
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious class="sr-only sm:not-sr-only" />
+      <CarouselNext class="sr-only sm:not-sr-only" />
     </Carousel>
 
-    <div aria-hidden="true" class="mb-2 flex gap-1.5 mt-6">
+    <div aria-hidden="true" class="mb-2 flex gap-1.5">
       <button
         v-for="step in total"
         :key="step"
