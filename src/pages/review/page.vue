@@ -93,7 +93,7 @@ const onReshuffle = () => {
                     <p class="text-3xl font-semibold">{{ q.word }}</p>
                     <Speak variant="ghost" v-if="category === 'words'" :word="q.word" />
                   </div>
-                    <CornerRightUp class="size-4 text-gray-500 self-end" />
+                  <CornerRightUp class="size-4 text-gray-500 self-end" />
                 </CardContent>
               </Card>
               <Card v-else>
@@ -103,11 +103,11 @@ const onReshuffle = () => {
                     <div class="flex flex-col">
                       <p class="text-sm text-gray-500">{{ q.word }}</p>
                       <p class="text-3xl font-semibold">{{ q.definition }}</p>
-                        <p class="text-xs text-gray-500 mt-6">Example:</p>
+                      <p class="text-xs text-gray-500 mt-6">Example:</p>
                       <p class="text-sm" v-html="q.example" />
                     </div>
                   </div>
-                    <CornerRightUp class="size-4 text-gray-500 self-end" />
+                  <CornerRightUp class="size-4 text-gray-500 self-end" />
                 </CardContent>
               </Card>
             </transition>

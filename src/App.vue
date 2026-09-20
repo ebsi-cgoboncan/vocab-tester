@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { Button } from '@/components/ui/button'
-import { Home, Sun, Moon } from '@lucide/vue'
+import { BookCheck, Sun, Moon } from '@lucide/vue'
 </script>
 
 <script setup lang="ts">
@@ -22,12 +22,12 @@ const onClick = () => (store.value = store.value === 'dark' ? 'light' : 'dark')
   <main>
     <div class="flex justify-between">
       <NavigationMenu class="gap-4 mb-6">
-        <img src="/pwa-192x192.png" class="w-8 h-8" />
+        <img src="/vocabulary.png" class="h-10" />
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink as-child>
               <router-link :to="{ name: 'home' }"
-                ><span class="box flex gap-2"><Home /> Home</span></router-link
+                ><span class="box flex gap-2"><BookCheck /> Lessons</span></router-link
               >
             </NavigationMenuLink>
           </NavigationMenuItem>
