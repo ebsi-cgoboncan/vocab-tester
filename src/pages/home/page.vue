@@ -11,8 +11,8 @@ const { weeks, toReview, toLesson } = useViewModel()
 <template>
   <section class="mx-auto max-w-lg">
     <h1>Lessons</h1>
-    <div class="flex flex-col space-y-2">
-      <div class="flex p-2 border rounded justify-between" v-for="week in weeks">
+    <div class="flex flex-col space-y-2 ">
+      <div class="flex p-2 pl-4 border rounded-xl justify-between items-center" v-for="week in weeks">
         <p>{{ week }}</p>
         <div class="flex gap-2">
           <Button variant="outline" @click="toReview(week)"><GalleryThumbnails /> Review</Button>
