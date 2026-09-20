@@ -1,6 +1,7 @@
 <script lang="ts">
 import { useViewModel } from './model'
 import { Button } from '@/components/ui/button'
+import { GalleryThumbnails, BookCheck } from '@lucide/vue'
 </script>
 
 <script setup lang="ts">
@@ -14,8 +15,8 @@ const { weeks, toReview, toLesson } = useViewModel()
       <div class="flex p-2 border rounded justify-between" v-for="week in weeks">
         <p>{{ week }}</p>
         <div class="flex gap-2">
-          <Button variant="outline" @click="toReview(week)">Review</Button>
-          <Button @click="toLesson(week)">Test</Button>
+          <Button variant="outline" @click="toReview(week)"><GalleryThumbnails /> Review</Button>
+          <Button @click="toLesson(week)"><BookCheck /> Test</Button>
         </div>
       </div>
     </div>

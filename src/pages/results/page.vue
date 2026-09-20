@@ -1,6 +1,6 @@
 <script lang="ts">
 import { useViewModel } from './model'
-import { RotateCcw } from '@lucide/vue'
+import { GalleryThumbnails, RotateCcw } from '@lucide/vue'
 import { Button } from '@/components/ui/button'
 import {
   Table,
@@ -14,7 +14,7 @@ import { onMounted } from 'vue'
 </script>
 
 <script setup lang="ts">
-const { correct, total, incorrects, toHome, onRestart } = useViewModel()
+const { correct, total, incorrects, toHome, toReview, onRestart } = useViewModel()
 
 onMounted(() => {
   if (total) return
@@ -24,9 +24,14 @@ onMounted(() => {
 
 <template>
   <div class="mx-auto space-y-4">
-    <div class="flex justify-between gap-2">
+    <div class="flex justify-between">
       <h1 class="text-xl font-bold">Score : {{ Math.round((correct / total) * 100) }}%</h1>
-      <Button @click="onRestart" variant="outline" size="icon"><RotateCcw /> </Button>
+      <div class="flex gap-2">
+        <Button @click="toReview" variant="outline"> <GalleryThumbnails /> Review </Button>
+        <Button @click="onRestart" variant="outline">
+          <RotateCcw />
+        </Button>
+      </div>
     </div>
     <div class="space" v-if="incorrects.length">Great job! 🎉</div>
     <div v-else>

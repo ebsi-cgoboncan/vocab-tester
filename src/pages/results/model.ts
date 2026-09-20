@@ -40,8 +40,12 @@ export const useViewModel = () => {
     router.push({ name: 'home' })
   }
 
+  const toReview = () => {
+    router.push({ name: 'review', params: { week } })
+  }
+
   const onRestart = () => {
-    router.push({ name: 'lesson', params: { week: week } })
+    router.push({ name: 'lesson', params: { week } })
   }
 
   return {
@@ -50,6 +54,7 @@ export const useViewModel = () => {
     incorrects,
     week,
     toHome,
+    toReview,
     onRestart,
   }
 }
