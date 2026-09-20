@@ -1,4 +1,3 @@
-import { useRouter } from 'vue-router'
 import { useLessonStore } from '@/stores/lesson'
 import * as R from 'fp-ts/Record'
 import * as RA from 'fp-ts/ReadonlyArray'
@@ -19,7 +18,6 @@ const toIncorrect: ToIncorrect = (selection) => (answer) => ({
 })
 
 export const useViewModel = () => {
-  const router = useRouter()
   const lesson = useLessonStore()
   const correct = pipe(
     lesson.answers,
@@ -36,25 +34,10 @@ export const useViewModel = () => {
 
   const week = lesson.week
 
-  const toHome = () => {
-    router.push({ name: 'home' })
-  }
-
-  const toReview = () => {
-    router.push({ name: 'review', params: { week } })
-  }
-
-  const onRestart = () => {
-    router.push({ name: 'lesson', params: { week } })
-  }
-
   return {
     correct,
     total,
     incorrects,
     week,
-    toHome,
-    toReview,
-    onRestart,
   }
 }

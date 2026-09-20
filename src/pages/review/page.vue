@@ -20,7 +20,7 @@ import {
 import { useViewModel } from './model'
 import type { Week } from '@/stores/lesson/types'
 import { useRoute } from 'vue-router'
-import { BookCheck, Shuffle, RotateCcw, CornerRightUp } from '@lucide/vue'
+import { Shuffle, RotateCcw, CornerRightUp } from '@lucide/vue'
 import { ref, watch } from 'vue'
 </script>
 
@@ -30,7 +30,7 @@ const { week } = route.params
 const _week = week as Week
 const api = ref<CarouselApi>()
 
-const { category, questions, current, total, reshuffle, toLesson } = useViewModel(_week)
+const { category, questions, current, total, reshuffle } = useViewModel(_week)
 
 watch(category, () => {
   if (!api.value) return
@@ -68,7 +68,6 @@ const onReshuffle = () => {
         </SelectContent>
       </Select>
       <div class="flex gap-2">
-        <Button variant="outline" @click="toLesson"><BookCheck /> Take a test</Button>
         <Button variant="outline" size="icon" @click="onReshuffle"><Shuffle /></Button>
         <Button variant="outline" size="icon" @click="api?.scrollTo(0)"><RotateCcw /></Button>
       </div>

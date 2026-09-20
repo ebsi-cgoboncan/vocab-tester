@@ -5,7 +5,6 @@ import { type Question, type Week } from '@/stores/lesson/types'
 import type { Term } from './types'
 import { computed, reactive, ref, type Reactive } from 'vue'
 import { shuffle, sow } from '@/stores/lesson/utils'
-import { useRouter } from 'vue-router'
 
 type ToTerm = (question: Question) => Reactive<Term>
 const toTerm: ToTerm = (q) =>
@@ -18,7 +17,6 @@ const toTerm: ToTerm = (q) =>
   })
 
 export const useViewModel = (week: Week) => {
-  const router = useRouter()
   const lesson = useLessonStore()
   const seed = ref(sow())
 
@@ -36,16 +34,11 @@ export const useViewModel = (week: Week) => {
   const total = computed(() => questions.value.length)
   const reshuffle = () => (seed.value = sow())
 
-  const toLesson = () => {
-    router.push({ name: 'lesson', params: { week } })
-  }
-
   return {
     category,
     questions,
     current,
     total,
     reshuffle,
-    toLesson,
   }
 }

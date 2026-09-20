@@ -1,4 +1,5 @@
 export * from './home'
 export * from './lesson'
+export * from './study'
 export * from './results'
 export * from './review'

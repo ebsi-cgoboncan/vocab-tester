@@ -8,18 +8,20 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { Button } from '@/components/ui/button'
-import { BookOpenCheck, Sun, Moon } from '@lucide/vue'
+import { BookOpenCheck, Table, GalleryThumbnails, BookCheck, Sun, Moon } from '@lucide/vue'
+import { useRoute } from 'vue-router'
 </script>
 
 <script setup lang="ts">
 const { system, store } = useColorMode()
 store.value = system.value
+const route = useRoute()
 
 const onClick = () => (store.value = store.value === 'dark' ? 'light' : 'dark')
 </script>
 
 <template>
-  <main>
+  <main class="mb-14">
     <div class="flex justify-between">
       <NavigationMenu class="gap-4 mb-6">
         <img src="/vocabulary.png" class="h-10" />
@@ -28,6 +30,28 @@ const onClick = () => (store.value = store.value === 'dark' ? 'light' : 'dark')
             <NavigationMenuLink as-child>
               <router-link :to="{ name: 'home' }"
                 ><span class="box flex gap-2"><BookOpenCheck /> Lessons</span></router-link
+              >
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem v-if="route.params.week" class="border-l">
+            <NavigationMenuLink as-child>
+              <router-link :to="{ name: 'study', params: { week: route.params.week } }"
+                ><span class="box flex gap-2"><Table /> Study</span></router-link
+              >
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem v-if="route.params.week">
+            <NavigationMenuLink as-child>
+              <router-link :to="{ name: 'review', params: { week: route.params.week } }"
+                ><span class="box flex gap-2"><GalleryThumbnails /> Review </span></router-link
+              >
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem v-if="route.params.week">
+            <NavigationMenuLink as-child>
+              <router-link :to="{ name: 'lesson', params: { week: route.params.week } }"
+                ><span class="box flex gap-2"><BookCheck /> Test </span></router-link
               >
             </NavigationMenuLink>
           </NavigationMenuItem>

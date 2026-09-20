@@ -60,14 +60,17 @@ export const useLessonStore = defineStore('lesson', () => {
   const week = ref<Week>(defaultWeek)
   const answers = ref<Record<string, string>>({})
 
-  const parts = computed(() => {
-    const { prefixes, roots, suffixes } = Lessons[week.value].parts
-    const _prefixes = pipe(prefixes, RA.map(toQuestion('prefix')))
-    const _roots = pipe(roots, RA.map(toQuestion('root')))
-    const _suffixes = pipe(suffixes, RA.map(toQuestion('suffix')))
+  const prefixes = computed(() =>
+    pipe(Lessons[week.value].parts.prefixes, RA.map(toQuestion('prefix'))),
+  )
+  const roots = computed(() => pipe(Lessons[week.value].parts.roots, RA.map(toQuestion('root'))))
+  const suffixes = computed(() =>
+    pipe(Lessons[week.value].parts.suffixes, RA.map(toQuestion('suffix'))),
+  )
 
-    return pipe(_prefixes, RA.concat(_roots), RA.concat(_suffixes))
-  })
+  const parts = computed(() =>
+    pipe(prefixes.value, RA.concat(roots.value), RA.concat(suffixes.value)),
+  )
 
   const definitions = computed(() =>
     pipe(Lessons[week.value].definitions, RA.map(toQuestion('definition'))),
@@ -92,6 +95,9 @@ export const useLessonStore = defineStore('lesson', () => {
     week,
     weeks,
     items,
+    prefixes,
+    roots,
+    suffixes,
     parts,
     definitions,
     answers,
