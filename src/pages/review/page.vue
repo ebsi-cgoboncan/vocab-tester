@@ -59,16 +59,16 @@ const onReshuffle = () => {
   <div class="mx-auto max-w-md flex flex-col gap-6">
     <div class="flex w-full justify-between">
       <div class="flex gap-2 items-center">
-      Review
-      <Select class="" v-model="category">
-        <SelectTrigger>
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="parts">Parts</SelectItem>
-          <SelectItem value="words">Words</SelectItem>
-        </SelectContent>
-      </Select>
+        Review
+        <Select class="" v-model="category">
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="parts">Parts</SelectItem>
+            <SelectItem value="words">Words</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <div class="flex gap-2">
