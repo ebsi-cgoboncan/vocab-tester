@@ -1,6 +1,6 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-import { Lessons } from './data'
+import { Lessons } from '@/data'
 import type { Week, Entry, Question, Type, Item, Choice } from './types'
 import * as RA from 'fp-ts/ReadonlyArray'
 import * as A from 'fp-ts/Array'

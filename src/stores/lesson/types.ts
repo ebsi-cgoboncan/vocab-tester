@@ -1,4 +1,4 @@
-import { Lessons } from './data'
+import { Lessons } from '@/data'
 
 export type Week = keyof typeof Lessons
 
